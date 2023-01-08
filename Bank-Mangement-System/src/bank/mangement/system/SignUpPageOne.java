@@ -250,63 +250,71 @@ public class SignUpPageOne extends JFrame implements ActionListener{
         String country = countryTextField.getText();
         String postalCode = postalCodeTextField.getText();  
         
-        checkForValidation( formNumber, name, fathersName, dob, gender, emailAddress, 
-                            maritalStatus, address, city, provinceOrState, country, postalCode );
-        // At this point all strings are valid
-        
-        try {
+        if( checkForValidation( formNumber, name, fathersName, dob, gender, emailAddress, 
+                                maritalStatus, address, city, provinceOrState, country, postalCode )) {
+            // At this point all strings are valid
+            // Send data to database
+           try {
             Conn c = new Conn();
             String query = "insert into signupPageOne values('"+formNumber+"','"+name+"','"+fathersName+"','"+dob+"','"+gender+"','"+emailAddress+"','"+maritalStatus+"','"+address+"','"+city+"','"+provinceOrState+"','"+country+"','"+postalCode+"')";
-            c.s.executeUpdate(query);                
-        } catch (Exception e) {
-            System.out.println(e);
+            c.s.executeUpdate(query);   
+            
+            setVisible(false);
+            new SignUpPageTwo(formNumber).setVisible(true);
+            } catch (Exception e) {
+                System.out.println(e);
+           }
         }
     }
     
-    public void checkForValidation( String formNumber, String name, String fathersName, String dob, String gender, 
+    public boolean checkForValidation( String formNumber, String name, String fathersName, String dob, String gender, 
                                     String emailAddress, String maritalStatus, String address, String city, 
                                     String provinceOrState, String country, String postalCode
     ) {
 
         if (name.equals("")) {
             JOptionPane.showMessageDialog(null, "Name is Required");
-            return;
+            return false;
         }
         if (fathersName.equals("")) {
             JOptionPane.showMessageDialog(null, "Father's Name is Required");
-            return;
+            return false;
         }
         if (dob.equals("")) {
             JOptionPane.showMessageDialog(null, "Date of Birth is Required");
-            return;
+            return false;
         }
         if (gender.equals("")) {
             JOptionPane.showMessageDialog(null, "Gender is Required");
-            return;
+            return false;
         }
         if (emailAddress.equals("")) {
             JOptionPane.showMessageDialog(null, "Email Address is Required");
-            return;
+            return false;
         }
         if (maritalStatus.equals("")) {
             JOptionPane.showMessageDialog(null, "Marital Status is Required");
-            return;
+            return false;
         }
         if (address.equals("")) {
             JOptionPane.showMessageDialog(null, "Address is Required");
-            return;
+            return false;
         }
         if (city.equals("")) {
             JOptionPane.showMessageDialog(null, "City is Required");
-            return;
+            return false;
         }
         if (country.equals("")) {
             JOptionPane.showMessageDialog(null, "Country is Required");
-            return;
+            return false;
         }
         if (postalCode.equals("")) {
             JOptionPane.showMessageDialog(null, "Postal Code is Required");
+            return false;
         }
+        
+        // All validations passed
+        return true;
     }
     
     public static void main(String args[]) {
