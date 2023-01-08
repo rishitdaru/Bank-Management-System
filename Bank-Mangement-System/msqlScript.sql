@@ -9,3 +9,9 @@ create table signupPageOne( formNumber varchar(20), name varchar(20), fathersNam
 show tables;
 
 select * from signupPageOne;
+
+create table signupPageTwo( formNumber varchar(20), ethnicity varchar(20), income varchar(20), educationalQualification varchar(30), occupation varchar(30), sinOrTinNumber varchar(10), senior varchar(5), existingAccount varchar(5) );
+
+show tables;
+
+select * from signupPageTwo;
