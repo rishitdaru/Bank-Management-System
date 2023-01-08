@@ -24,7 +24,8 @@ public class SignUpPageOne extends JFrame implements ActionListener{
         setSize(850, 800);
         setLocation (350, 10);
         setLayout(null);
-        
+        setTitle("NEW ACCOUNT APPLICATION FORM - PAGE 1");
+
         // Display form number
         Random randomNum = new Random();
         randomNumber = Math.abs((randomNum.nextLong() % 9000L) + 1000L);
