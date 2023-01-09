@@ -3,6 +3,7 @@ package bank.mangement.system;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.*;
 
 /**
  * @author Rishit Daru
@@ -150,7 +151,7 @@ public class SignUpPageThree extends JFrame implements ActionListener{
         add(declarationCheckBox);
         
         // Add 'Submit' button
-        submitButton = new JButton("Next");
+        submitButton = new JButton("Submit");
         submitButton.setBounds(250, 640, 80, 30);
         submitButton.setBackground(Color.BLUE);
         submitButton.setForeground(Color.WHITE);
@@ -172,7 +173,66 @@ public class SignUpPageThree extends JFrame implements ActionListener{
     
     @Override
     public void actionPerformed(ActionEvent ae) {
-    
+        if (ae.getSource() == submitButton){
+            String accountType="";
+            if (savingsAccountRadioButton.isSelected()) {
+                accountType = "Savings Account";
+            } else if (checkingAccountRadioButton.isSelected()) {
+                accountType = "Checking Account";
+            } else if (recurringDepositAccountRadioButton.isSelected()) {
+                accountType = "Recurring Deposit Account";
+            } else if (fixedDepositAccountRadioButton.isSelected()) {
+                accountType = "Fixed Deposit Account";
+            }
+            
+            Random random = new Random();
+            String cardNumber = "" + Math.abs((random.nextLong() % 90000000L) + 5040936000000000L);
+
+            String pinNumber = "" + Math.abs((random.nextLong() % 9000L) + 1000L);
+
+            
+            String servicesSelected = "";
+            if (atmCardCheckBox.isSelected()) {
+                servicesSelected += "ATM Card";
+            } else if (internetBankingCheckBox.isSelected()) {
+                servicesSelected += "Internet Banking";
+            } else if (mobileBankingCheckBox.isSelected()) {
+                servicesSelected += "Mobile Banking";
+            } else if (emailAlertsCheckBox.isSelected()) {
+                servicesSelected += "Email Alerts";
+            } else if (paperStatementCheckBox.isSelected()) {
+                servicesSelected += "Paper Statement";
+            } else if (eStatementCheckBox.isSelected()) {
+                servicesSelected += "E-Statement";
+            }
+            
+            try {
+                if(accountType.equals("")) {
+                    JOptionPane.showMessageDialog(null, "Account Type is required");
+                } else if(!declarationCheckBox.isSelected()) {
+                    JOptionPane.showMessageDialog(null, "Please confirm the declaration statement.");
+                } else {
+                   // If no exception has occurred
+                    Conn c = new Conn();
+                    String query1 = "insert into signUpPageThree values('"+formNumber+"','"+accountType+"','"+cardNumber+"','"+pinNumber+"','"+servicesSelected+"')";  
+                    String query2 = "insert into login values('"+formNumber+"','"+cardNumber+"','"+pinNumber+"')";  
+                    c.s.executeUpdate(query1);
+                    c.s.executeUpdate(query2);
+                    JOptionPane.showMessageDialog(null, "Your Card Number is: " + cardNumber + "\n You PIN is: " + pinNumber);
+
+                    setVisible(false);
+                    new SignUpPageThree(formNumber);
+                }
+                
+                
+            } catch (Exception e) {
+                System.out.println(e);
+            }
+
+            
+        } else if (ae.getSource() == cancelButton) {
+            
+        }
     }
     
     public static void main(String args[]) {
