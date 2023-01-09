@@ -71,7 +71,7 @@ public class SignUpPageTwo extends JFrame implements ActionListener{
         add(qualificationLabel);
         
         // Educational Qualification Dropdown
-        String educationalQualificationList[] = {"No formal education", "Primary Education", "Secondary Education", "GED", "Vocational Qualification", "Bachelor's degree", "Master's degree", "Doctorate or higher"};
+        String educationalQualificationList[] = {"No formal education", "Primary Education", "Secondary Education", "GED", "Vocational Qualification", "Bachelors degree", "Masters degree", "Doctorate or higher"};
         educationalQualificationDropdown = new JComboBox(educationalQualificationList);
         educationalQualificationDropdown.setBounds(300, 250, 400, 30);
         educationalQualificationDropdown.setBackground(Color.WHITE);
