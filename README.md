@@ -13,6 +13,15 @@ The main frameworks used include:
 
 The user has the option to sign in or sign up. The 'sign up' option has 3 pages to complete the process. Once the user enters all information required, a card number and PIN is provided. The user can then sign in using these credentials. After signing in, the user has options to do the following: 
 
+**SignUp page 1:** <br/>
+<img src="https://user-images.githubusercontent.com/65996001/211383565-6d4f7768-71f7-42ce-ac24-dcf1410c104e.png" width=50% height=50%>
+
+**SignUp page 2:** <br/>
+<img src="https://user-images.githubusercontent.com/65996001/211383796-2af7c619-4203-49c7-a2e3-b5aaf1c191bc.png" width=50% height=50%>
+
+**SignUp page 3:** <br/>
+<img src="https://user-images.githubusercontent.com/65996001/211384579-b7321758-7139-4a56-a1bd-ed56b3f70cc5.png" width=50% height=50%>
+
 **Login page:** <br/>
 <img src="https://user-images.githubusercontent.com/65996001/211382096-0a5eafa5-7279-4031-b2ef-9404985e0390.png" width=50% height=50%>
 
