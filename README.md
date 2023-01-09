@@ -1,17 +1,17 @@
 # Bank-Management-System
 
-This **JAVA** based desktop application is a 
+This is a **JAVA** based desktop application which simulates a real-world ATM machine but with additonal faciltity to create an account (Sign Up).
 
 The database management system used that has been used is **MySQL** (I have worked with SQL, Oracle, Prometheus, and InfluxDB before, never worked with MYSQL before so this was a good experience)
 
-I used **Netbeans** for development, this IDE was chosen because it is widely used by most programmers due to its excellent tools for design forms of the Swing GUI. (And I had never used Netbeans before, so this served as a good experience in adding one more IDE to my toolkit)
+I used **Netbeans** for development, this IDE was chosen because it is widely used by most programmers due to its excellent tools for design forms of the Swing GUI. (Again, I have worked with Eclipse, VSCode, MyEclipse, PyCharm, etc before but I had never used Netbeans, so this served as a good experience in adding one more IDE to my toolkit)
 
 The main frameworks used include:
 - **JAVA AWT**: an API to develop GUI applications in Java. 
 - **Swing**: a GUI widget toolkit for Java (it is a part of Java Foundation Classes)
 
 
-The user has the option to sign in or sign up. The 'sign up' option has 3 pages to complete the process. Once the user enters all information required, a card number and PIN is provided. The user can then sign in using these credentials. After signing in, the user has options to do the following: 
+The user has the option to sign in or sign up. The 'sign up' option has 3 pages to complete the process. Once the user enters all information required, a card number and PIN is provided. The user can then sign in using these credentials.
 
 **SignUp page 1:** <br/>
 <img src="https://user-images.githubusercontent.com/65996001/211383565-6d4f7768-71f7-42ce-ac24-dcf1410c104e.png" width=50% height=50%>
@@ -24,6 +24,8 @@ The user has the option to sign in or sign up. The 'sign up' option has 3 pages 
 
 **Login page:** <br/>
 <img src="https://user-images.githubusercontent.com/65996001/211382096-0a5eafa5-7279-4031-b2ef-9404985e0390.png" width=50% height=50%>
+
+After signing in, the user has options to do the following: 
 
 **After signing in:** <br/>
 <img src="https://user-images.githubusercontent.com/65996001/211380283-aa97bce3-3cee-4002-bf3d-adbd55b07385.png" width=50% height=50%>
