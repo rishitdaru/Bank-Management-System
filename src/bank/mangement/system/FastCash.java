@@ -19,7 +19,7 @@ public class FastCash extends JFrame implements ActionListener{
         setSize(900, 900);
         setLocation (300, 0);
         setLayout(null);
-        setTitle("Transactions");
+        setTitle("FastCash");
          
         // Adding background image to frame
         ImageIcon imageIcon = new ImageIcon(ClassLoader.getSystemResource("icons/atm.jpg"));

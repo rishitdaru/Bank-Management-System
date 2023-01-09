@@ -65,7 +65,7 @@ public class Transactions extends JFrame implements ActionListener{
         changePinButton.addActionListener(this);
         label.add(changePinButton);
         
-        // Add Change PIN Button
+        // Balance Enquiry Button
         balanceEnquiryButton = new JButton("Check Balance");
         balanceEnquiryButton.setBounds(355, 485, 150, 30);
         balanceEnquiryButton.addActionListener(this);
@@ -94,6 +94,12 @@ public class Transactions extends JFrame implements ActionListener{
         }  else if (ae.getSource() == fastCashButton) {
             setVisible(false);
             new FastCash(pinNumber).setVisible(true);
+        } else if (ae.getSource() == changePinButton) {
+            setVisible(false);
+            new PinChange(pinNumber).setVisible(true);
+        } else if (ae.getSource() == balanceEnquiryButton) {
+            setVisible(false);
+            new BalanceEnquiry(pinNumber).setVisible(true);
         }
     }
     
