@@ -108,7 +108,7 @@ public class Login extends JFrame implements ActionListener{
                 ResultSet rs = conn.s.executeQuery(query);
                 if(rs.next()) {
                     setVisible(false);
-                    new Transactions().setVisible(true);
+                    new Transactions(pinNumber).setVisible(true);
                 } else {
                     JOptionPane.showMessageDialog(null, "Incorrect Card Number or Pin");
                 }

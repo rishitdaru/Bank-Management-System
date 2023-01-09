@@ -85,6 +85,15 @@ public class Transactions extends JFrame implements ActionListener{
     public void actionPerformed(ActionEvent ae) {
         if(ae.getSource() == exitButton) {
             System.exit(0);
+        } else if (ae.getSource() == depositButton) {
+            setVisible(false);
+            new Deposit(pinNumber).setVisible(true);
+        } else if (ae.getSource() == withdrawalButton) {
+            setVisible(false);
+            new Withdraw(pinNumber).setVisible(true);
+        }  else if (ae.getSource() == fastCashButton) {
+            setVisible(false);
+            new FastCash(pinNumber).setVisible(true);
         }
     }
     

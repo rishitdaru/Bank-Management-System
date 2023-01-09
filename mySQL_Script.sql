@@ -25,3 +25,8 @@ select * from signupPageThree;
 create table login(formNumber varchar(20), cardNumber varchar(25), pinNumber varchar(10) );
 
 select * from login;
+
+create table bank(pinNumber varchar(10), date varchar(50), typeOfTransaction varchar(20), amount varchar(20) );
+
+select * from bank;
+
