@@ -15,3 +15,13 @@ create table signupPageTwo( formNumber varchar(20), ethnicity varchar(20), incom
 show tables;
 
 select * from signupPageTwo;
+
+create table signupPageThree( formNumber varchar(20), accountType varchar(40), cardNumber varchar(25), pinNumber varchar(10), servicesSelected varchar(100));
+
+show tables;
+
+select * from signupPageThree;
+
+create table login(formNumber varchar(20), cardNumber varchar(25), pinNumber varchar(10) );
+
+select * from login;
