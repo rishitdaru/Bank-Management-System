@@ -13,6 +13,8 @@ The main frameworks used include:
 
 The user has the option to sign in or sign up. The 'sign up' option has 3 pages to complete the process. Once the user enters all information required, a card number and PIN is provided. The user can then sign in using these credentials. After signing in, the user has options to do the following: 
 
+**Login page:** <br/>
+<img src="https://user-images.githubusercontent.com/65996001/211382096-0a5eafa5-7279-4031-b2ef-9404985e0390.png" width=50% height=50%>
 
 **After signing in:** <br/>
 <img src="https://user-images.githubusercontent.com/65996001/211380283-aa97bce3-3cee-4002-bf3d-adbd55b07385.png" width=50% height=50%>
@@ -25,4 +27,16 @@ The user has the option to sign in or sign up. The 'sign up' option has 3 pages 
 
 **Fast Cash:**  <br/>
 <img src="https://user-images.githubusercontent.com/65996001/211381021-839d821b-0645-438f-b5a6-43f8d1f5ef84.png" width=50% height=50%>
+
+**Pin Change:** <br/>
+<img src="https://user-images.githubusercontent.com/65996001/211382468-eded9c36-c3f5-4c7a-8b0b-8bdb6a9319ea.png" width=50% height=50%>
+
+**Mini Statement:** <br/>
+<img src="https://user-images.githubusercontent.com/65996001/211382765-b55789c5-2d38-4fcd-94f2-66f98beff0e9.png" width=50% height=50%>
+
+**Balance:** <br/>
+<img src="https://user-images.githubusercontent.com/65996001/211382925-357bcd0f-1ba1-44bc-a4b9-651cb0da886b.png" width=50% height=50%>
+
+
+
 
