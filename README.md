@@ -1,6 +1,6 @@
 # Bank-Management-System
 
-This is a **JAVA** based desktop application which simulates a real-world ATM machine but with additonal faciltity to create an account (Sign Up).
+This is a **JAVA** based desktop application which simulates a real-world ATM machine but with additional facility to create an account (Sign Up).
 
 The database management system used that has been used is **MySQL** (I have worked with SQL, Oracle, Prometheus, and InfluxDB before, never worked with MYSQL before so this was a good experience)
 
