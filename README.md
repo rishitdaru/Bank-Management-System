@@ -1,4 +1,4 @@
-# Bank-Management-System a.k.a SmartBanker
+# Bank-Management-System (a.k.a SmartBanker)
 
 This is a **JAVA** based desktop application which simulates a real-world ATM machine but with additional facility to create an account (Sign Up).
 
